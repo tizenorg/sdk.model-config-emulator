@@ -1,6 +1,6 @@
 Name:		model-config-emulator
 Summary:	A Model configuration
-Version:	0.0.1
+Version:	0.0.2
 Release:	0
 Group:		System/Configuration
 License:	Apache License, Version 2.0
@@ -18,9 +18,14 @@ Model configuration data package
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/etc/config
-cp -f model-config.xml %{buildroot}/etc/config/model-config.xml
+%if "%{?tizen_profile_name}" == "mobile"
+cp -f model-config_mobile.xml %{buildroot}/etc/config/model-config.xml
+%else
+cp -f model-config_wearable.xml %{buildroot}/etc/config/model-config.xml
+%endif
+
 mkdir -p %{buildroot}/usr/share/license
-cp %{_builddir}/%{name}-%{version}/LICENSE.APLv2 %{buildroot}/usr/share/license/%{name}
+cp %{_builddir}/%{name}-%{version}/LICENSE.Apache-2.0 %{buildroot}/usr/share/license/%{name}
 
 %files
 /usr/share/license/%{name}
