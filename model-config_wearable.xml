@@ -59,7 +59,7 @@
 		<key name="tizen.org/feature/network.nfc.card_emulation" type="bool">false</key>
 		<key name="tizen.org/feature/network.nfc.card_emulation.hce" type="bool">false</key>
 		<key name="tizen.org/feature/network.nfc.reserved_push" type="bool">false</key>
-		<key name="tizen.org/feature/network.push" type="bool">false</key>
+		<key name="tizen.org/feature/network.push" type="bool">true</key>
 		<key name="tizen.org/feature/network.secure_element" type="bool">false</key>
 		<key name="tizen.org/feature/network.secure_element.ese" type="bool">false</key>
 		<key name="tizen.org/feature/network.secure_element.uicc" type="bool">false</key>
